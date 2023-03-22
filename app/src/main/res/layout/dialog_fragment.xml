@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    >
+
+    <Button
+        android:id="@+id/pomodoro_button"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:background="@drawable/main_button"
+        android:text="@string/pomodoro"
+        android:textColor="#C4C4C4"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/short_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/short_button"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:background="@drawable/main_button"
+        android:text="@string/short_break"
+        android:textColor="#C4C4C4"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/long_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pomodoro_button"
+         />
+
+    <Button
+        android:id="@+id/long_button"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:background="@drawable/main_button"
+        android:text="@string/long_break"
+        android:textColor="#C4C4C4"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/short_button"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:textColor="#C4C4C4"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/long_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="15"
+        android:textColor="#C4C4C4"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/short_textview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/short_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="5"
+        android:textColor="#C4C4C4"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/long_textview"
+        app:layout_constraintStart_toEndOf="@+id/pomo_textview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="236dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pomo_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="20"
+        android:textColor="#C4C4C4"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/short_textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/short_timeset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/short_break"
+        app:layout_constraintEnd_toStartOf="@+id/long_timeset"
+        app:layout_constraintStart_toEndOf="@+id/pomodoro_timeset"
+        app:layout_constraintTop_toBottomOf="@+id/short_textview" />
+
+    <Button
+        android:id="@+id/pomodoro_timeset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pomodoro"
+        app:layout_constraintEnd_toStartOf="@+id/short_timeset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pomo_textview" />
+
+    <Button
+        android:id="@+id/long_timeset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/long_break"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/short_timeset"
+        app:layout_constraintTop_toBottomOf="@+id/long_textview" />
+
+    <Switch
+        android:id="@+id/auto_breaks"
+        android:layout_width="326dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/autostart_breaks"
+        android:textColor="#C4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/short_timeset"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/auto_pomodoros"
+        android:layout_width="326dp"
+        android:layout_height="81dp"
+        android:text="@string/autostart_pomodoros"
+        android:textColor="#C4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auto_breaks"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
